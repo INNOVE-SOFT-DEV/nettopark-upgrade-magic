@@ -1,96 +1,79 @@
 import { Button } from "@/components/ui/button";
-import { Play, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-parking.jpg";
+import { Link } from "react-router-dom";
+import { Play, ArrowRight, Phone } from "lucide-react";
+import heroImage from "@/assets/hero-nettopark.jpg";
 
 export const HeroSection = () => {
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <svg width="60" height="60" className="w-full h-full" style={{ backgroundRepeat: 'repeat' }}>
-          <pattern id="dots" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-            <circle cx="30" cy="30" r="2" fill="white" fillOpacity="0.3" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#dots)" />
-        </svg>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="min-h-screen bg-gradient-hero flex items-center pt-16 lg:pt-20">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <div className="fade-in-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Faites appel aux{" "}
-              <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                experts du nettoyage
-              </span>{" "}
-              de parkings
+          {/* Left - Content */}
+          <div className="text-white fade-in-left">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+              Faites appel aux experts du nettoyage de parkings en région parisienne
             </h1>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Une propreté éclatante qui crée une impression durable. Nos équipes 
-              spécialisées interviennent en région parisienne pour tous vos besoins 
-              de nettoyage de parkings.
+            <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
+              Une propreté éclatante qui crée une impression durable. Nos équipes sont 
+              là pour répondre à vos besoins de nettoyage de parkings, que ce soit pour 
+              des interventions ponctuelles ou des entretiens réguliers.
             </p>
 
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="btn-primary text-lg px-8 py-4">
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Demande de devis
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
+                <Link to="/contact">
+                  Demande Devis
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
-              <Button variant="ghost" size="lg" className="btn-secondary text-lg px-8 py-4">
+              
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-white text-white hover:bg-white/10 backdrop-blur-sm"
+              >
                 <Play className="w-5 h-5 mr-2" />
                 Voir NettoPark en action
               </Button>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-blue-100">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-sm">Disponible 24h/7j</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-sm">Devis gratuit</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-sm">Équipement professionnel</span>
-              </div>
+            {/* Contact Info */}
+            <div className="flex items-center gap-4 text-blue-100">
+              <a 
+                href="tel:0187662130"
+                className="flex items-center hover:text-white transition-colors group"
+              >
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-white/30 transition-colors">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-sm">Appelez-nous</div>
+                  <div className="font-semibold">01 87 66 21 30</div>
+                </div>
+              </a>
             </div>
           </div>
 
-          {/* Right Column - Image */}
+          {/* Right - Hero Image */}
           <div className="fade-in-right">
             <div className="relative">
               <img 
                 src={heroImage} 
-                alt="Parking professionnel nettoyé par NettoPark" 
-                className="rounded-2xl shadow-professional-xl w-full h-auto"
+                alt="Équipement professionnel de nettoyage de parkings NettoPark" 
+                className="rounded-2xl shadow-glow w-full"
               />
               
-              {/* Floating Contact Card */}
-              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-professional">
-                <div className="flex items-center gap-3">
-                  <div className="bg-gradient-primary text-white p-2 rounded-lg">
-                    <Play className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">NettoPark</div>
-                    <div className="text-sm text-muted-foreground">01 87 66 21 30</div>
-                  </div>
+              {/* Floating Badge */}
+              <div className="absolute bottom-6 right-6 bg-white rounded-xl p-4 shadow-professional-xl">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">NettoPark</div>
+                  <div className="text-sm text-muted-foreground">Expert en nettoyage</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
         </div>
       </div>
     </section>

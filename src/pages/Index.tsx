@@ -1,21 +1,21 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ClientLogos } from "@/components/ClientLogos";
-import { AboutSection } from "@/components/AboutSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { RealizationsSection } from "@/components/RealizationsSection";
+import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
+import { ProcessSection } from "@/components/ProcessSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
       <ClientLogos />
-      <AboutSection />
-      <ServicesSection />
-      <RealizationsSection />
+      <WhyChooseUsSection />
+      <ProcessSection />
+      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </div>

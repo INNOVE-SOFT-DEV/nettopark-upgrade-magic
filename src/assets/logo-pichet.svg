@@ -1,0 +1,25 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_779_1967)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 84.7783H21.4874V80.4819H3V84.7783Z" fill="#FF0000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 77.6177H21.4874V73.3213H3V77.6177Z" fill="#FF0000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 70.457H21.4874V66.1606H3V70.457Z" fill="#FF0000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.68475 59L5.41846 63.2964H24.3318V82.3432L28.5981 78.0473V59H9.68475Z" fill="#FF0000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M120.34 67.9182C122.005 67.9182 123.752 68.5437 124.896 69.4137L125.489 67.1806C123.739 66.3187 122.064 65.9009 120.073 65.9009C112.49 65.9009 108.626 71.3184 108.626 76.9293C108.626 82.265 111.941 85.0381 117.388 85.0381C119.778 85.0381 121.754 84.6749 124.029 83.7422L125.041 76.5282H120.216L119.347 82.7277C118.871 82.8692 118.403 82.9298 117.834 82.9298C114.034 82.9298 113.504 79.1887 113.504 76.8793C113.504 72.5309 115.917 67.9182 120.34 67.9182Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M52.8345 84.778H57.6586L60.2699 66.1606H55.4452L52.8345 84.778Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37.8413 84.778H48.5963L48.8778 82.7728H42.9474L43.8951 76.0124H49.398L49.6489 74.2219H44.1464L44.9958 68.1659H50.9261L51.2076 66.1606H40.4526L37.8413 84.778Z" fill="black"/>
+<mask id="mask0_779_1967" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="127" y="66" width="14" height="19">
+<path d="M140.908 84.778V66.1606H127.542V84.778H140.908Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_779_1967)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M140.627 68.1659L140.909 66.1606H130.154L127.542 84.778H138.298L138.579 82.7733H132.649L133.596 76.0124H139.099L139.35 74.2219H133.848L134.696 68.1659H140.627Z" fill="black"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M62.6797 84.778H67.5038L68.7335 76.0124H74.2364L74.4872 74.2219H68.9843L69.8342 68.1659H75.764L76.0455 66.1606H65.2904L62.6797 84.778Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M89.184 74.2219H83.6811L84.5309 68.1659H90.4613L90.7422 66.1606H79.9872L77.377 84.778H82.2011L83.4302 76.0124H88.9332L89.184 74.2219Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M95.4535 77.0444L98.721 71.2419L99.9436 77.0444H95.4535ZM98.9297 66.1528L88.4727 84.7783H91.0984L94.4452 78.8349H100.321L101.574 84.7783H106.128L102.256 66.1528H98.9297Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_779_1967">
+<rect width="138" height="27" fill="white" transform="translate(3 59)"/>
+</clipPath>
+</defs>
+</svg>
