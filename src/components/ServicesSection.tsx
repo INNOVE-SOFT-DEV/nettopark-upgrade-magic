@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight, Play, Sparkles, Zap, Target } from "lucide-react";
-import autolaveusImage from "@/assets/autolaveuse-action.jpg";
+import autolaveusImage from "@/assets/team-autolaveuse.jpg";
 
 export const ServicesSection = () => {
   const services = [

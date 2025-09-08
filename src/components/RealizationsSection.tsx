@@ -13,21 +13,22 @@ import {
   Eye,
   CheckCircle
 } from "lucide-react";
-import beforeAfter1 from "@/assets/before-after-1.jpg";
-import realization1 from "@/assets/realization-1.jpg";
-import realization2 from "@/assets/realization-2.jpg";
+import realization1 from "@/assets/realisation-parking-1.jpg";
+import realization2 from "@/assets/realisation-parking-2.jpg";
+import realization3 from "@/assets/realisation-parking-3.jpg";
+import realization4 from "@/assets/realisation-parking-4.jpg";
 
 export const RealizationsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Résidence Luxury Park - Paris 16e",
-      category: "Résidentiel haut de gamme",
+      title: "Parking Souterrain Résidentiel",
+      category: "Résidentiel",
       surface: "2 500 m²",
       duration: "3 jours",
       image: realization1,
-      description: "Nettoyage complet et dégraissage d'un parking souterrain de standing avec traitement anti-taches.",
-      results: ["Élimination 100% des taches d'huile", "Amélioration de l'éclairage naturel", "Satisfaction client : 5/5"],
+      description: "Nettoyage complet d'un parking souterrain résidentiel avec autolaveuses professionnelles.",
+      results: ["Élimination 100% des taches d'huile", "Amélioration de la propreté", "Satisfaction client : 5/5"],
       testimonial: {
         text: "Un travail remarquable ! Le parking n'avait jamais été aussi propre. L'équipe NettoPark est très professionnelle.",
         author: "Marie Dubois",
@@ -36,7 +37,7 @@ export const RealizationsSection = () => {
     },
     {
       id: 2,
-      title: "Centre Commercial Rosny 2",
+      title: "Centre Commercial - Grande Surface",
       category: "Commercial",
       surface: "8 000 m²",
       duration: "1 semaine",
@@ -51,17 +52,32 @@ export const RealizationsSection = () => {
     },
     {
       id: 3,
-      title: "Transformation Complète - Avant/Après",
-      category: "Rénovation",
-      surface: "1 200 m²", 
-      duration: "2 jours",
-      image: beforeAfter1,
-      description: "Rénovation complète d'un parking négligé avec élimination des taches tenaces et remise à neuf.",
+      title: "Parking d'Entreprise - Bureaux",
+      category: "Professionnel",
+      surface: "3 200 m²", 
+      duration: "4 jours",
+      image: realization3,
+      description: "Nettoyage approfondi d'un parking d'entreprise avec techniques spécialisées.",
       results: ["Transformation spectaculaire", "Valorisation du patrimoine", "ROI immédiat constaté"],
       testimonial: {
         text: "Incroyable transformation ! On ne reconnaît plus notre parking. Un investissement qui en valait la peine.",
         author: "Sophie Laurent",
         position: "Gestionnaire immobilier"
+      }
+    },
+    {
+      id: 4,
+      title: "Copropriété - Maintenance Régulière",
+      category: "Résidentiel",
+      surface: "1 800 m²", 
+      duration: "2 jours",
+      image: realization4,
+      description: "Entretien régulier avec contrat de maintenance pour une copropriété parisienne.",
+      results: ["Propreté maintenue toute l'année", "Réduction des coûts à long terme", "Résidents satisfaits"],
+      testimonial: {
+        text: "Avec NettoPark, notre parking reste impeccable toute l'année. Service irréprochable.",
+        author: "Pierre Lefebvre",
+        position: "Président de copropriété"
       }
     }
   ];
