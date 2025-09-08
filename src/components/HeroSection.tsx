@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Play, ArrowRight, Phone, Star, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/walid-team.jpg";
+const heroImageUrl = "/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png";
 
 export const HeroSection = () => {
   return (
@@ -92,8 +92,8 @@ export const HeroSection = () => {
           <div className="fade-in-right">
             <div className="relative float-animation">
               <img 
-                src={heroImage} 
-                alt="Équipement professionnel de nettoyage de parkings NettoPark" 
+                src={heroImageUrl} 
+                alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne" 
                 className="rounded-3xl shadow-premium w-full pulse-glow"
               />
               
