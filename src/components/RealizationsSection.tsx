@@ -14,9 +14,9 @@ import {
   CheckCircle
 } from "lucide-react";
 import realization1 from "@/assets/parking-underground-1.jpg";
-import realization2 from "@/assets/parking-cleaning-1.jpg";
+import realization2 from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
 import realization3 from "@/assets/parking-before-after.jpg";
-import realization4 from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
+import realization4 from "@/assets/parking-commercial.jpg";
 
 export const RealizationsSection = () => {
   const projects = [
