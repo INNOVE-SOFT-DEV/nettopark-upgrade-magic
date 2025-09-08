@@ -32,13 +32,13 @@ export const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Navigation */}
+          <nav className="flex items-center space-x-4 lg:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                className={`text-xs lg:text-sm font-medium transition-colors duration-200 hover:text-primary ${
                   isActive(item.path) 
                     ? "text-primary" 
                     : "text-foreground"
