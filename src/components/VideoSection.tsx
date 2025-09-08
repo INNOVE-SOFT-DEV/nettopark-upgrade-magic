@@ -13,101 +13,113 @@ export const VideoSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Content */}
-          <div className="text-white fade-in-left">
-            <Badge className="mb-6 bg-gradient-gold text-accent-foreground border-0 px-4 py-2 text-sm font-semibold pulse-glow">
-              🎬 Découvrez NettoPark en action
-            </Badge>
-            
-            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Voir nos
-              <span className="block text-gradient bg-gradient-gold bg-clip-text text-transparent">
-                techniques de nettoyage
-              </span>
-              en vidéo
-            </h2>
-            
-            <p className="text-xl lg:text-2xl text-blue-100 mb-10 leading-relaxed">
-              Découvrez comment nos équipes utilisent des autolaveuses professionnelles 
-              pour transformer vos parkings. Une démonstration complète de notre savoir-faire 
-              et de nos techniques de nettoyage haute performance.
-            </p>
+        {/* Header Section */}
+        <div className="text-center text-white mb-16 fade-in-up">
+          <Badge className="mb-6 bg-gradient-gold text-accent-foreground border-0 px-4 py-2 text-sm font-semibold pulse-glow">
+            🎬 Découvrez NettoPark en action
+          </Badge>
+          
+          <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
+            Nos
+            <span className="block text-gradient bg-gradient-gold bg-clip-text text-transparent">
+              techniques de nettoyage
+            </span>
+            en vidéo
+          </h2>
+          
+          <p className="text-xl lg:text-2xl text-blue-100 mb-10 leading-relaxed max-w-4xl mx-auto">
+            Découvrez comment nos équipes utilisent des autolaveuses professionnelles 
+            pour transformer vos parkings. Une démonstration complète de notre savoir-faire.
+          </p>
+        </div>
 
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Button 
-                size="lg" 
-                className="btn-secondary text-lg px-8 py-4"
-                onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Regarder la vidéo
-              </Button>
-              
-              <Button size="lg" className="btn-outline-light text-lg px-8 py-4">
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Demander un devis
-              </Button>
-            </div>
-          </div>
-
-          {/* Right - Video Preview */}
-          <div className="fade-in-right">
+        {/* Videos Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {/* Video 1 - Main Demo */}
+          <div className="fade-in-left">
             <Card className="card-premium overflow-hidden">
               <CardContent className="p-0">
-                <div className="relative bg-gradient-to-br from-primary/90 via-primary/70 to-primary/50 h-96 flex items-center justify-center backdrop-blur-sm">
-                  {/* Video Preview Background Pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="grid grid-cols-6 gap-2 h-full p-4">
-                      {Array.from({ length: 24 }).map((_, i) => (
-                        <div 
-                          key={i} 
-                          className="bg-white rounded animate-pulse" 
-                          style={{ animationDelay: `${i * 0.1}s` }}
-                        ></div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Play Button and Content */}
-                  <div className="text-center text-white relative z-10">
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/561b718b-28b0-4548-a355-2d3d1dcf02f6.png")'}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <div 
-                      className="w-24 h-24 bg-gradient-premium rounded-full flex items-center justify-center text-white mb-6 mx-auto hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
                       onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
                     >
-                      <Play className="w-12 h-12 ml-1" />
-                    </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-                      Nettoyage de Parking
-                    </h3>
-                    <p className="text-blue-100 text-lg max-w-sm mx-auto mb-6">
-                      Découvrez nos autolaveuses en action et nos techniques professionnelles
-                    </p>
-                    
-                    {/* Video Stats */}
-                    <div className="flex justify-center gap-6 text-sm">
-                      <div className="text-center">
-                        <div className="font-bold text-white">3:45</div>
-                        <div className="text-blue-200">Durée</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="font-bold text-white">HD</div>
-                        <div className="text-blue-200">Qualité</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="font-bold text-white">2024</div>
-                        <div className="text-blue-200">Récent</div>
-                      </div>
+                      <Play className="w-10 h-10 ml-1" />
                     </div>
                   </div>
 
-                  {/* Corner Badge */}
-                  <div className="absolute top-4 left-4 bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                    🏆 Expertise
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Autolaveuse en Action</h3>
+                    <p className="text-blue-100 mb-4">Découvrez nos équipements professionnels à l'œuvre</p>
+                    
+                    <div className="flex justify-between text-sm">
+                      <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
+                        🎬 Démonstration
+                      </span>
+                      <span className="text-blue-200">3:45 min</span>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Video 2 - Results */}
+          <div className="fade-in-right">
+            <Card className="card-premium overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/c73ab08b-d45d-43ea-a197-5efec4f829f2.png")'}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div 
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                      onClick={() => window.open('https://youtu.be/cdmjuwIRcoc', '_blank')}
+                    >
+                      <Play className="w-10 h-10 ml-1" />
+                    </div>
+                  </div>
+
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Résultats Spectaculaires</h3>
+                    <p className="text-blue-100 mb-4">Avant/après de nos interventions de nettoyage</p>
+                    
+                    <div className="flex justify-between text-sm">
+                      <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
+                        🏆 Résultats
+                      </span>
+                      <span className="text-blue-200">2:30 min</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="text-center fade-in-up">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button 
+              size="lg" 
+              className="btn-secondary text-lg px-8 py-4"
+              onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Voir toutes nos vidéos
+            </Button>
+            
+            <Button size="lg" className="btn-outline-light text-lg px-8 py-4">
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Demander un devis gratuit
+            </Button>
           </div>
         </div>
 
@@ -119,7 +131,7 @@ export const VideoSection = () => {
                 <Play className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Démonstration complète</h4>
-              <p className="text-blue-100 text-sm">Voir chaque étape du processus de nettoyage</p>
+              <p className="text-blue-100 text-sm">Voir chaque étape du processus de nettoyage professionnel</p>
             </CardContent>
           </Card>
 
@@ -128,8 +140,8 @@ export const VideoSection = () => {
               <div className="w-12 h-12 bg-gradient-premium rounded-full flex items-center justify-center mx-auto mb-4">
                 <ArrowRight className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">Techniques professionnelles</h4>
-              <p className="text-blue-100 text-sm">Découvrez nos méthodes éprouvées</p>
+              <h4 className="text-lg font-semibold text-white mb-2">Techniques avancées</h4>
+              <p className="text-blue-100 text-sm">Découvrez nos méthodes et équipements de pointe</p>
             </CardContent>
           </Card>
 
@@ -139,7 +151,7 @@ export const VideoSection = () => {
                 <div className="w-6 h-6 bg-white rounded-full"></div>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Résultats garantis</h4>
-              <p className="text-blue-100 text-sm">Constatez par vous-même la qualité</p>
+              <p className="text-blue-100 text-sm">Constatez par vous-même la transformation</p>
             </CardContent>
           </Card>
         </div>
