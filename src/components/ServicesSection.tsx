@@ -3,7 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight, Play, Sparkles, Zap, Target } from "lucide-react";
-import autolaveusImage from "@/assets/team-autolaveuse.jpg";
+import parkingCleaning from "@/assets/parking-cleaning-1.jpg";
+import parkingUnderground from "@/assets/parking-underground-1.jpg";
+import parkingMaintenance from "@/assets/parking-maintenance.jpg";
+import parkingCommercial from "@/assets/parking-commercial.jpg";
 
 export const ServicesSection = () => {
   const services = [
@@ -54,7 +57,7 @@ export const ServicesSection = () => {
           <div className="fade-in-left">
             <div className="relative float-animation">
               <img 
-                src={autolaveusImage} 
+                src={parkingCleaning} 
                 alt="Autolaveuse professionnelle en action pour le nettoyage de parking" 
                 className="rounded-3xl shadow-premium w-full h-96 object-cover pulse-glow hover:scale-105 transition-transform duration-500"
               />

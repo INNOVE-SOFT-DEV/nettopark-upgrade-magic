@@ -13,10 +13,10 @@ import {
   Eye,
   CheckCircle
 } from "lucide-react";
-import realization1 from "@/assets/realisation-parking-1.jpg";
-import realization2 from "@/assets/realisation-parking-2.jpg";
-import realization3 from "@/assets/realisation-parking-3.jpg";
-import realization4 from "@/assets/realisation-parking-4.jpg";
+import realization1 from "@/assets/parking-underground-1.jpg";
+import realization2 from "@/assets/parking-cleaning-1.jpg";
+import realization3 from "@/assets/parking-before-after.jpg";
+import realization4 from "@/assets/parking-commercial.jpg";
 
 export const RealizationsSection = () => {
   const projects = [

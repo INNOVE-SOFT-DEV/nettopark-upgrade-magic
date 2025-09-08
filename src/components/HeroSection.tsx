@@ -23,11 +23,11 @@ export const HeroSection = () => {
             </Badge>
             
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-              Faites appel aux 
+              Faites appel aux experts du  
               <span className="block text-gradient bg-gradient-gold bg-clip-text text-transparent">
-                experts du nettoyage
+                nettoyage de parkings
               </span>
-              de parkings
+              en région parisienne
             </h1>
             
             <p className="text-xl lg:text-2xl text-blue-100 mb-10 leading-relaxed max-w-2xl">
