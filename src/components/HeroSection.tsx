@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Play, ArrowRight, Phone, Star, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/autolaveuse-action.jpg";
+import heroImage from "@/assets/walid-team.jpg";
 
 export const HeroSection = () => {
   return (
