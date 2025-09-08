@@ -8,13 +8,8 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
-  console.log("Index component is rendering");
-  
   return (
     <div className="min-h-screen bg-background">
-      <div style={{padding: '20px', background: 'red', color: 'white'}}>
-        TEST - If you see this, React is working
-      </div>
       <Header />
       <HeroSection />
       <ClientLogos />

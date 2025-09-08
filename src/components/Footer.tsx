@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { 
   Phone, 
   Mail, 
@@ -125,15 +126,15 @@ export const Footer = () => {
               © 2024 NettoPark. Tous droits réservés.
             </div>
             <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-primary transition-colors">
+              <Link to="/contact" className="hover:text-primary transition-colors">
                 Mentions légales
-              </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              </Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">
                 Politique de confidentialité
-              </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              </Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">
                 CGV
-              </a>
+              </Link>
             </div>
           </div>
         </div>

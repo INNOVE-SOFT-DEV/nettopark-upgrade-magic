@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Users, 
   Award, 
@@ -11,7 +12,7 @@ import {
   MapPin,
   TrendingUp
 } from "lucide-react";
-import teamPhoto from "@/assets/team-photo.jpg";
+import teamPhoto from "@/assets/walid-team.jpg";
 
 export const AboutSection = () => {
   const values = [
@@ -132,7 +133,7 @@ export const AboutSection = () => {
               <img 
                 src={teamPhoto} 
                 alt="Équipe NettoPark - Professionnels du nettoyage" 
-                className="rounded-2xl shadow-professional-xl w-full"
+                className="rounded-2xl shadow-professional-xl w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
               />
               
               {/* Quality Badge */}
@@ -238,13 +239,17 @@ export const AboutSection = () => {
                 pour l'entretien de leurs parkings.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Planifier une visite
+                <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
+                  <Link to="/contact">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Planifier une visite
+                  </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Voir nos réalisations
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                  <Link to="/services">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    Voir nos réalisations
+                  </Link>
                 </Button>
               </div>
             </CardContent>

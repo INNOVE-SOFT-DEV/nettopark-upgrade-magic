@@ -56,7 +56,7 @@ export const ServicesSection = () => {
               <img 
                 src={autolaveusImage} 
                 alt="Autolaveuse professionnelle en action pour le nettoyage de parking" 
-                className="rounded-3xl shadow-premium w-full pulse-glow"
+                className="rounded-3xl shadow-premium w-full h-96 object-cover pulse-glow hover:scale-105 transition-transform duration-500"
               />
               
               {/* Play Button Overlay */}

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Star, 
   Quote, 
@@ -114,7 +115,7 @@ export const RealizationsSection = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="rounded-2xl shadow-professional-xl w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="rounded-2xl shadow-professional-xl w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
                   {/* Category Badge */}
@@ -197,9 +198,11 @@ export const RealizationsSection = () => {
                   </Card>
 
                   {/* CTA Button */}
-                  <Button className="btn-primary">
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    Projet similaire ? Contactez-nous
+                  <Button asChild className="btn-primary">
+                    <Link to="/contact">
+                      <ArrowRight className="w-4 h-4 mr-2" />
+                      Projet similaire ? Contactez-nous
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -219,13 +222,17 @@ export const RealizationsSection = () => {
                 et découvrons ensemble comment nous pouvons transformer votre espace.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-primary">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Planifier une évaluation gratuite
+                <Button asChild size="lg" className="btn-primary">
+                  <Link to="/contact">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Planifier une évaluation gratuite
+                  </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="btn-outline">
-                  <Eye className="w-4 h-4 mr-2" />
-                  Voir plus de réalisations
+                <Button asChild variant="outline" size="lg" className="btn-outline">
+                  <Link to="/services">
+                    <Eye className="w-4 h-4 mr-2" />
+                    Voir plus de réalisations
+                  </Link>
                 </Button>
               </div>
             </CardContent>
