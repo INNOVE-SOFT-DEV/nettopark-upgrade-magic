@@ -19,7 +19,7 @@ export const HeroSection = () => {
           <div className="text-white fade-in-left">
             {/* Premium Badge */}
             <Badge className="mb-6 bg-gradient-gold text-accent-foreground border-0 px-4 py-2 text-sm font-semibold pulse-glow">
-              ⭐ Expert depuis +10 ans en région parisienne
+              ⭐ Experts du nettoyage de parkings
             </Badge>
             
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
@@ -92,7 +92,7 @@ export const HeroSection = () => {
           <div className="fade-in-right">
             <div className="relative float-animation">
               <img 
-                src={heroImage} 
+                src="/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png"
                 alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne" 
                 className="rounded-3xl shadow-premium w-full pulse-glow"
               />
