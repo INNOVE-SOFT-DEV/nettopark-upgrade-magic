@@ -6,7 +6,7 @@ import { CheckCircle, ArrowRight, Play, Sparkles, Zap, Target } from "lucide-rea
 import parkingCleaning from "@/assets/parking-cleaning-1.jpg";
 import parkingUnderground from "@/assets/parking-underground-1.jpg";
 import parkingMaintenance from "@/assets/parking-maintenance.jpg";
-import parkingCommercial from "@/assets/parking-commercial.jpg";
+import parkingCommercial from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
 
 export const ServicesSection = () => {
   const services = [
