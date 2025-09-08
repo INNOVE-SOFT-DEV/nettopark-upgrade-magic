@@ -35,7 +35,11 @@ export const VideoSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button size="lg" className="btn-secondary text-lg px-8 py-4">
+              <Button 
+                size="lg" 
+                className="btn-secondary text-lg px-8 py-4"
+                onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
+              >
                 <Play className="w-5 h-5 mr-2" />
                 Regarder la vidéo
               </Button>
@@ -67,7 +71,10 @@ export const VideoSection = () => {
 
                   {/* Play Button and Content */}
                   <div className="text-center text-white relative z-10">
-                    <div className="w-24 h-24 bg-gradient-premium rounded-full flex items-center justify-center text-white mb-6 mx-auto hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow">
+                    <div 
+                      className="w-24 h-24 bg-gradient-premium rounded-full flex items-center justify-center text-white mb-6 mx-auto hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                      onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
+                    >
                       <Play className="w-12 h-12 ml-1" />
                     </div>
                     <h3 className="text-2xl lg:text-3xl font-bold mb-4">
