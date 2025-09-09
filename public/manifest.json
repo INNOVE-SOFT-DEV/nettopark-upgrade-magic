@@ -1,0 +1,21 @@
+{
+  "name": "NettoPark - Experts du Nettoyage de Parkings",
+  "short_name": "NettoPark",
+  "description": "Experts du nettoyage de parkings en région parisienne. Propreté éclatante avec autolaveuses professionnelles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E40AF",
+  "theme_color": "#1E40AF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "fr",
+  "scope": "/",
+  "id": "nettopark-app"
+}
