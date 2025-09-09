@@ -101,7 +101,7 @@ export const HeroSection = () => {
               <img 
                 src="/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png"
                 alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne" 
-                className="rounded-3xl shadow-premium w-full max-w-none lg:scale-110 xl:scale-125 pulse-glow"
+                className="rounded-3xl shadow-premium w-full max-w-none lg:scale-125 xl:scale-150 pulse-glow"
               />
               
               {/* Floating Stats Cards */}
