@@ -64,9 +64,14 @@ export const ServicesSection = () => {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center hover:scale-125 transition-all duration-500 cursor-pointer shadow-glow pulse-glow">
+                <a 
+                  href="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center hover:scale-125 transition-all duration-500 cursor-pointer shadow-glow pulse-glow"
+                >
                   <Play className="w-10 h-10 text-white ml-1" />
-                </div>
+                </a>
               </div>
 
               {/* Quality Badge */}
@@ -154,9 +159,14 @@ export const ServicesSection = () => {
               <CardContent className="p-0">
                 <div className="relative bg-gradient-hero h-80 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-white mb-6 mx-auto hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-white mb-6 mx-auto hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow"
+                    >
                       <Play className="w-10 h-10 ml-1" />
-                    </div>
+                    </a>
                     <h4 className="text-2xl font-bold mb-4">
                       Nos Prestations en Images
                     </h4>
