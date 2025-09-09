@@ -39,7 +39,7 @@ export const VideoSection = () => {
           <div className="fade-in-left">
             <Card className="card-premium overflow-hidden">
               <CardContent className="p-0">
-                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/561b718b-28b0-4548-a355-2d3d1dcf02f6.png")'}}>
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("/lovable-uploads/561b718b-28b0-4548-a355-2d3d1dcf02f6.png")'}}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   
                   {/* Play Button */}
@@ -75,7 +75,7 @@ export const VideoSection = () => {
           <div className="fade-in-right">
             <Card className="card-premium overflow-hidden">
               <CardContent className="p-0">
-                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/c73ab08b-d45d-43ea-a197-5efec4f829f2.png")'}}>
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("/lovable-uploads/c73ab08b-d45d-43ea-a197-5efec4f829f2.png")'}}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   
                   {/* Play Button */}
