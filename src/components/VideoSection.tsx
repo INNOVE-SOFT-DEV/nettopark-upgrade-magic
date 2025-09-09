@@ -44,12 +44,14 @@ export const VideoSection = () => {
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div 
+                    <a 
+                      href="https://www.youtube.com/watch?v=rB_hcVQcHPQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
-                      onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
                     >
                       <Play className="w-10 h-10 ml-1" />
-                    </div>
+                    </a>
                   </div>
 
                   {/* Content Overlay */}
@@ -78,12 +80,14 @@ export const VideoSection = () => {
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div 
+                    <a 
+                      href="https://www.youtube.com/watch?v=cdmjuwIRcoc"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
-                      onClick={() => window.open('https://youtu.be/cdmjuwIRcoc', '_blank')}
                     >
                       <Play className="w-10 h-10 ml-1" />
-                    </div>
+                    </a>
                   </div>
 
                   {/* Content Overlay */}
@@ -108,12 +112,14 @@ export const VideoSection = () => {
         <div className="text-center fade-in-up">
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
+              asChild
               size="lg" 
               className="btn-secondary text-lg px-8 py-4"
-              onClick={() => window.open('https://youtu.be/rB_hcVQcHPQ', '_blank')}
             >
-              <Play className="w-5 h-5 mr-2" />
-              Voir toutes nos vidéos
+              <a href="https://www.youtube.com/watch?v=rB_hcVQcHPQ" target="_blank" rel="noopener noreferrer">
+                <Play className="w-5 h-5 mr-2" />
+                Voir toutes nos vidéos
+              </a>
             </Button>
             
             <Button size="lg" className="btn-outline-light text-lg px-8 py-4">
