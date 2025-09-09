@@ -13,10 +13,10 @@ import {
   Eye,
   CheckCircle
 } from "lucide-react";
-import realization1 from "@/assets/parking-realisation-1.jpg";
-import realization2 from "@/assets/parking-realisation-2.jpg";
-import realization3 from "@/assets/parking-realisation-3.jpg";
-import realization4 from "@/assets/parking-realisation-4.jpg";
+import realization1 from "@/assets/parking-underground-enhanced.jpg";
+import realization2 from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
+import realization3 from "/lovable-uploads/662cc2d7-bdaa-45cc-aaa2-88e2ceb6de29.png";
+import realization4 from "/lovable-uploads/b59dff20-ea0a-4230-9219-6d34df5e8913.png";
 
 export const RealizationsSection = () => {
   const projects = [

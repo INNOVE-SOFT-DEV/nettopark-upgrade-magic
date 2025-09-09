@@ -34,81 +34,78 @@ export const VideoSection = () => {
         </div>
 
         {/* Videos Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* Video 1 - Équipements */}
-          <Card className="card-premium overflow-hidden group hover:scale-105 transition-all duration-500">
-            <CardContent className="p-0">
-              <div className="relative h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <a 
-                  href="https://youtu.be/IAIxDaS83gI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform pulse-glow">
-                    <Play className="w-8 h-8 ml-1" />
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {/* Video 1 - Main Demo */}
+          <div className="fade-in-left">
+            <Card className="card-premium overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/561b718b-28b0-4548-a355-2d3d1dcf02f6.png")'}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <a 
+                      href="https://www.youtube.com/watch?v=rB_hcVQcHPQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                    >
+                      <Play className="w-10 h-10 ml-1" />
+                    </a>
                   </div>
-                </a>
-                
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                    <h3 className="font-bold text-foreground text-sm mb-1">Équipements Professionnels</h3>
-                    <p className="text-xs text-muted-foreground">Découvrez nos autolaveuses</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
 
-          {/* Video 2 - Démonstration */}
-          <Card className="card-premium overflow-hidden group hover:scale-105 transition-all duration-500">
-            <CardContent className="p-0">
-              <div className="relative h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <a 
-                  href="https://youtu.be/rB_hcVQcHPQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform pulse-glow">
-                    <Play className="w-8 h-8 ml-1" />
-                  </div>
-                </a>
-                
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                    <h3 className="font-bold text-foreground text-sm mb-1">Nettoyage en Action</h3>
-                    <p className="text-xs text-muted-foreground">Techniques professionnelles</p>
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Autolaveuse en Action</h3>
+                    <p className="text-blue-100 mb-4">Découvrez nos équipements professionnels à l'œuvre</p>
+                    
+                    <div className="flex justify-between text-sm">
+                      <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
+                        🎬 Démonstration
+                      </span>
+                      <span className="text-blue-200">3:45 min</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
 
-          {/* Video 3 - Résultats */}
-          <Card className="card-premium overflow-hidden group hover:scale-105 transition-all duration-500 md:col-span-2 lg:col-span-1">
-            <CardContent className="p-0">
-              <div className="relative h-64 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <a 
-                  href="https://youtu.be/cdmjuwIRcoc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform pulse-glow">
-                    <Play className="w-8 h-8 ml-1" />
+          {/* Video 2 - Results */}
+          <div className="fade-in-right">
+            <Card className="card-premium overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/c73ab08b-d45d-43ea-a197-5efec4f829f2.png")'}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <a 
+                      href="https://www.youtube.com/watch?v=cdmjuwIRcoc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                    >
+                      <Play className="w-10 h-10 ml-1" />
+                    </a>
                   </div>
-                </a>
-                
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                    <h3 className="font-bold text-foreground text-sm mb-1">Résultats Spectaculaires</h3>
-                    <p className="text-xs text-muted-foreground">Avant/après transformations</p>
+
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Résultats Spectaculaires</h3>
+                    <p className="text-blue-100 mb-4">Avant/après de nos interventions de nettoyage</p>
+                    
+                    <div className="flex justify-between text-sm">
+                      <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
+                        🏆 Résultats
+                      </span>
+                      <span className="text-blue-200">2:30 min</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Action Buttons */}
@@ -119,7 +116,7 @@ export const VideoSection = () => {
               size="lg" 
               className="btn-secondary text-lg px-8 py-4"
             >
-              <a href="https://youtu.be/IAIxDaS83gI" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/watch?v=rB_hcVQcHPQ" target="_blank" rel="noopener noreferrer">
                 <Play className="w-5 h-5 mr-2" />
                 Voir toutes nos vidéos
               </a>

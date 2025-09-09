@@ -11,9 +11,9 @@ import {
   ArrowRight,
   CheckCircle
 } from "lucide-react";
-import rapportImage from "@/assets/rapport-nettopark-original.png";
-import parkingCleaning from "@/assets/parking-realisation-2.jpg";
-import parkingUnderground from "@/assets/parking-realisation-1.jpg";
+import rapportImage from "@/assets/rapport-intervention.png";
+import parkingCleaning from "/lovable-uploads/bce8b6b4-3f60-4ddc-b8ea-42617f8a2c6d.png";
+import parkingUnderground from "@/assets/parking-underground-1.jpg";
 
 export const ProcessSection = () => {
   const steps = [
