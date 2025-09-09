@@ -13,7 +13,7 @@ import {
   Eye,
   CheckCircle
 } from "lucide-react";
-import realization1 from "@/assets/parking-underground-1.jpg";
+import realization1 from "/lovable-uploads/a7be5b08-4a4e-4a96-ad0f-fff085c24374.png";
 import realization2 from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
 import realization3 from "/lovable-uploads/662cc2d7-bdaa-45cc-aaa2-88e2ceb6de29.png";
 import realization4 from "@/assets/parking-commercial.jpg";
