@@ -12,7 +12,7 @@ import {
   CheckCircle
 } from "lucide-react";
 import rapportImage from "@/assets/rapport-intervention.png";
-import parkingCleaning from "@/assets/parking-cleaning-1.jpg";
+import parkingCleaning from "/lovable-uploads/bce8b6b4-3f60-4ddc-b8ea-42617f8a2c6d.png";
 import parkingUnderground from "@/assets/parking-underground-1.jpg";
 
 export const ProcessSection = () => {
