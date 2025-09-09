@@ -62,18 +62,12 @@ export const HeroSection = () => {
               </Button>
               
               <Button 
-                asChild
                 size="lg" 
                 className="btn-secondary text-lg px-8 py-4"
+                onClick={() => window.open('https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s', '_blank')}
               >
-                <a 
-                  href="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Play className="w-5 h-5 mr-2" />
-                  Voir NettoPark en action
-                </a>
+                <Play className="w-5 h-5 mr-2" />
+                Voir NettoPark en action
               </Button>
             </div>
 
