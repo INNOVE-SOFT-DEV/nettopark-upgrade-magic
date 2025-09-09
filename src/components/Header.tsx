@@ -38,7 +38,7 @@ export const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-xs lg:text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                className={`text-sm lg:text-base font-bold transition-colors duration-200 hover:text-primary ${
                   isActive(item.path) 
                     ? "text-primary" 
                     : "text-foreground"
@@ -53,9 +53,9 @@ export const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a 
               href="tel:0187662130"
-              className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center text-base lg:text-lg font-bold text-muted-foreground hover:text-primary transition-colors"
             >
-              <Phone className="w-4 h-4 mr-2" />
+              <Phone className="w-5 h-5 mr-2" />
               01 87 66 21 30
             </a>
             <Button asChild size="sm">
@@ -85,7 +85,7 @@ export const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`block px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-md ${
+                  className={`block px-4 py-2 text-base font-bold transition-colors duration-200 rounded-md ${
                     isActive(item.path) 
                       ? "text-primary bg-primary/10" 
                       : "text-foreground hover:text-primary hover:bg-accent"
@@ -98,9 +98,9 @@ export const Header = () => {
               <div className="flex flex-col space-y-2 px-4 pt-2 border-t border-border mt-4">
                 <a 
                   href="tel:0187662130"
-                  className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center text-base font-bold text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-5 h-5 mr-2" />
                   01 87 66 21 30
                 </a>
                 <Button asChild size="sm" className="w-full">
