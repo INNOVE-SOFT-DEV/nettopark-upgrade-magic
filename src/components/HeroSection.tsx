@@ -105,7 +105,7 @@ export const HeroSection = () => {
               />
               
               {/* Floating Stats Cards */}
-              <div className="absolute -top-6 left-8 lg:left-12 card-premium p-6 rounded-2xl">
+              <div className="absolute -top-16 left-8 lg:left-12 card-premium p-6 rounded-2xl">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-1">500+</div>
                   <div className="text-sm text-muted-foreground">Parkings nettoyés</div>
