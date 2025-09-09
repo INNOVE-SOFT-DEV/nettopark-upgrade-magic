@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Star, Quote } from "lucide-react";
-import clientPhoto from "@/assets/client-karim.jpg";
+import clientPhoto from "@/assets/client-nettopark-original.jpg";
 
 export const TestimonialsSection = () => {
   const testimonial = {

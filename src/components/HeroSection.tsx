@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Play, ArrowRight, Phone, Star, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/hero-nettopark-main.jpg";
+import heroImage from "@/assets/nettopark-hero-original.jpg";
 
 export const HeroSection = () => {
   return (
@@ -94,7 +94,7 @@ export const HeroSection = () => {
               <img 
                 src="/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png"
                 alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne" 
-                className="rounded-3xl shadow-premium w-full max-w-none lg:scale-110 xl:scale-125 pulse-glow"
+                className="rounded-3xl shadow-premium w-full max-w-none lg:scale-105 pulse-glow"
               />
               
               {/* Floating Stats Cards */}
