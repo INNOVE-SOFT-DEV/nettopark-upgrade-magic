@@ -141,9 +141,11 @@ export const RealizationsSection = () => {
                   
                   {/* View Details Button */}
                   <div className="absolute inset-0 bg-primary/80 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button variant="secondary" size="lg" className="bg-white text-primary">
-                      <Eye className="w-4 h-4 mr-2" />
-                      Voir en détail
+                    <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
+                      <Link to="/contact" className="flex items-center">
+                        <Eye className="w-4 h-4 mr-2" />
+                        Voir en détail
+                      </Link>
                     </Button>
                   </div>
                 </div>
