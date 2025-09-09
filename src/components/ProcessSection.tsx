@@ -114,7 +114,6 @@ export const ProcessSection = () => {
                     alt={service.title}
                     className="rounded-2xl shadow-professional-xl w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl"></div>
                 </div>
               </div>
 
