@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import rapportImage from "@/assets/rapport-intervention.png";
 import parkingCleaning from "/lovable-uploads/bce8b6b4-3f60-4ddc-b8ea-42617f8a2c6d.png";
-import parkingUnderground from "@/assets/parking-underground-1.jpg";
+import parkingUnderground from "/lovable-uploads/13cba3f2-c3fd-4baa-8295-e9a42d834926.png";
 
 export const ProcessSection = () => {
   const steps = [
