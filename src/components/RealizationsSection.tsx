@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { 
   Star, 
@@ -11,7 +12,8 @@ import {
   Users,
   Award,
   Eye,
-  CheckCircle
+  CheckCircle,
+  X
 } from "lucide-react";
 import realization1 from "@/assets/parking-underground-enhanced.jpg";
 import realization2 from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
@@ -140,14 +142,46 @@ export const RealizationsSection = () => {
                   </Badge>
                   
                   {/* View Details Button */}
-                  <div className="absolute inset-0 bg-primary/80 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
-                      <Link to="/contact" className="flex items-center">
-                        <Eye className="w-4 h-4 mr-2" />
-                        Voir en détail
-                      </Link>
-                    </Button>
-                  </div>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="absolute inset-0 bg-primary/80 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                        <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
+                          <Eye className="w-4 h-4 mr-2" />
+                          Voir en détail
+                        </Button>
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-5xl w-full h-[90vh] p-0 bg-black border-0">
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                          <Badge className="mb-4 bg-gradient-primary text-white border-0">
+                            {project.category}
+                          </Badge>
+                          <h3 className="text-2xl font-bold text-white mb-2">
+                            {project.title}
+                          </h3>
+                          <p className="text-white/90 mb-4">
+                            {project.description}
+                          </p>
+                          <div className="flex gap-6 text-white/80 text-sm">
+                            <div className="flex items-center gap-2">
+                              <MapPin className="w-4 h-4" />
+                              Surface: {project.surface}
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <Calendar className="w-4 h-4" />
+                              Durée: {project.duration}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
 
