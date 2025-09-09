@@ -34,10 +34,10 @@ export const VideoSection = () => {
         </div>
 
         {/* Videos Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Video 1 - Main Demo */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          {/* Video 1 - New Video */}
           <div className="fade-in-left">
-            <Card className="card-premium overflow-hidden">
+            <Card className="card-premium overflow-hidden group">
               <CardContent className="p-0">
                 <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/561b718b-28b0-4548-a355-2d3d1dcf02f6.png")'}}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -45,10 +45,10 @@ export const VideoSection = () => {
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <a 
-                      href="https://www.youtube.com/watch?v=rB_hcVQcHPQ"
+                      href="https://youtu.be/IAIxDaS83gI"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow group-hover:animate-pulse"
                     >
                       <Play className="w-10 h-10 ml-1" />
                     </a>
@@ -56,10 +56,46 @@ export const VideoSection = () => {
 
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Autolaveuse en Action</h3>
-                    <p className="text-blue-100 mb-4">Découvrez nos équipements professionnels à l'œuvre</p>
+                    <h3 className="text-xl font-bold mb-2">Équipements Professionnels</h3>
+                    <p className="text-blue-100 mb-3 text-sm">Découvrez notre matériel de pointe</p>
                     
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs">
+                      <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
+                        🛠️ Équipements
+                      </span>
+                      <span className="text-blue-200">Vidéo HD</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Video 2 - Autolaveuse Demo */}
+          <div className="fade-in-up">
+            <Card className="card-premium overflow-hidden group">
+              <CardContent className="p-0">
+                <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/561b718b-28b0-4548-a355-2d3d1dcf02f6.png")'}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <a 
+                      href="https://youtu.be/rB_hcVQcHPQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow group-hover:animate-pulse"
+                    >
+                      <Play className="w-10 h-10 ml-1" />
+                    </a>
+                  </div>
+
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Autolaveuse en Action</h3>
+                    <p className="text-blue-100 mb-3 text-sm">Technique de nettoyage professionnel</p>
+                    
+                    <div className="flex justify-between text-xs">
                       <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
                         🎬 Démonstration
                       </span>
@@ -71,9 +107,9 @@ export const VideoSection = () => {
             </Card>
           </div>
 
-          {/* Video 2 - Results */}
+          {/* Video 3 - Results */}
           <div className="fade-in-right">
-            <Card className="card-premium overflow-hidden">
+            <Card className="card-premium overflow-hidden group">
               <CardContent className="p-0">
                 <div className="relative h-80 bg-cover bg-center" style={{backgroundImage: 'url("public/lovable-uploads/c73ab08b-d45d-43ea-a197-5efec4f829f2.png")'}}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -81,10 +117,10 @@ export const VideoSection = () => {
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <a 
-                      href="https://www.youtube.com/watch?v=cdmjuwIRcoc"
+                      href="https://youtu.be/cdmjuwIRcoc"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
+                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow group-hover:animate-pulse"
                     >
                       <Play className="w-10 h-10 ml-1" />
                     </a>
@@ -92,10 +128,10 @@ export const VideoSection = () => {
 
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Résultats Spectaculaires</h3>
-                    <p className="text-blue-100 mb-4">Avant/après de nos interventions de nettoyage</p>
+                    <h3 className="text-xl font-bold mb-2">Résultats Spectaculaires</h3>
+                    <p className="text-blue-100 mb-3 text-sm">Avant/après transformations</p>
                     
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs">
                       <span className="bg-gradient-gold text-accent-foreground px-3 py-1 rounded-full font-semibold">
                         🏆 Résultats
                       </span>
@@ -116,7 +152,7 @@ export const VideoSection = () => {
               size="lg" 
               className="btn-secondary text-lg px-8 py-4"
             >
-              <a href="https://www.youtube.com/watch?v=rB_hcVQcHPQ" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtu.be/IAIxDaS83gI" target="_blank" rel="noopener noreferrer">
                 <Play className="w-5 h-5 mr-2" />
                 Voir toutes nos vidéos
               </a>
