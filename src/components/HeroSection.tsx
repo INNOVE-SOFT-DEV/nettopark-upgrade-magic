@@ -92,8 +92,8 @@ export const HeroSection = () => {
           <div className="fade-in-right">
             <div className="relative float-animation">
               <img 
-                src="/lovable-uploads/7f3e7189-b8af-4993-aae4-190ff70b9592.png"
-                alt="Parking souterrain propre et spacieux après nettoyage professionnel NettoPark" 
+                src="/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png"
+                alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne" 
                 className="rounded-3xl shadow-premium w-full max-w-none lg:scale-110 xl:scale-125 pulse-glow"
               />
               
