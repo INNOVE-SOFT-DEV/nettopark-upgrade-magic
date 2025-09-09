@@ -28,7 +28,7 @@ export const Header = () => {
             <img 
               src={nettoparklLogo} 
               alt="NettoPark - Expert du nettoyage de parkings" 
-              className="h-8 lg:h-10 w-auto"
+              className="h-10 lg:h-14 w-auto"
             />
           </Link>
 
