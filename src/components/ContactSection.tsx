@@ -40,19 +40,11 @@ export const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Prénom *
-                  </label>
-                  <Input placeholder="Votre prénom" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Nom *
-                  </label>
-                  <Input placeholder="Votre nom" />
-                </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-2 block">
+                  Entreprise *
+                </label>
+                <Input placeholder="Nom de votre entreprise" />
               </div>
               
               <div>
