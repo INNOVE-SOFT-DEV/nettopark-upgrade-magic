@@ -85,42 +85,75 @@ export const HeroSection = () => {
 
           {/* Right - Hero Image */}
           <div className="fade-in-right">
-            <div className="relative float-animation lg:ml-16 xl:ml-24">
-              <img 
-                src="/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png"
-                alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne" 
-                className="rounded-3xl shadow-premium w-full max-w-none lg:scale-125 xl:scale-150 pulse-glow"
-              />
-              
-              {/* Floating Stats Cards */}
-              <div className="absolute -top-16 left-8 lg:left-12 card-premium p-6 rounded-2xl">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                  <div className="text-sm text-muted-foreground">Parkings nettoyés</div>
-                </div>
-              </div>
+  <div className="relative float-animation sm:ml-4 md:ml-8 lg:ml-16 xl:ml-24">
+    <img
+      src="/lovable-uploads/6851bb44-a7e8-4fdb-b007-67c1c9787679.png"
+      alt="Trois autolaveuses Tennant professionnelles avec équipe NettoPark pour nettoyage parkings région parisienne"
+      className="
+        rounded-xl sm:rounded-2xl md:rounded-3xl shadow-premium 
+        w-full object-cover 
+        h-[280px] sm:h-[350px] md:h-auto 
+        sm:max-w-none sm:scale-105 lg:scale-125 xl:scale-150 
+        pulse-glow
+      "
+    />
 
-              <div className="absolute -bottom-6 -right-6 card-premium p-6 rounded-2xl">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-1">24h</div>
-                  <div className="text-sm text-muted-foreground">Intervention rapide</div>
-                </div>
-              </div>
+    <div
+      className="
+        absolute top-3 left-3
+        sm:top-auto sm:left-auto sm:-bottom-6 sm:-right-6
+        card-premium p-2 sm:p-3 md:p-5 rounded-lg sm:rounded-xl md:rounded-2xl
+      "
+    >
+      <div className="text-center">
+        <div className="text-base sm:text-lg md:text-2xl font-bold text-primary mb-0.5 sm:mb-1">
+          24h
+        </div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
+          Intervention rapide
+        </div>
+      </div>
+    </div>
 
-              {/* Main Badge */}
-              <div className="absolute bottom-8 left-8 card-premium p-8 rounded-2xl">
-                <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">NettoPark</div>
-                  <div className="text-sm text-muted-foreground font-medium">Expert en nettoyage</div>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div
+      className="
+        absolute bottom-3 right-3
+        sm:bottom-auto sm:right-6 sm:-top-10
+        md:right-8 lg:right-12
+        card-premium p-2 sm:p-3 md:p-5 rounded-lg sm:rounded-xl md:rounded-2xl
+      "
+    >
+      <div className="text-center">
+        <div className="text-base sm:text-lg md:text-2xl font-bold text-primary mb-0.5 sm:mb-1">
+          500+
+        </div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
+          Parkings nettoyés
+        </div>
+      </div>
+    </div>
+
+    <div className="absolute bottom-3 left-3 sm:bottom-8 sm:left-8 card-premium p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl">
+      <div className="text-center">
+        <div className="text-base sm:text-xl md:text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-0.5 sm:mb-2">
+          NettoPark
+        </div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
+          Expert en nettoyage
+        </div>
+        <div className="flex justify-center mt-1 sm:mt-2">
+          {[...Array(5)].map((_, i) => (
+            <Star
+              key={i}
+              className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 text-yellow-400 fill-current"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
 
