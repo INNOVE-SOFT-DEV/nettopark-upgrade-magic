@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
+import YoutubeModal from "./ui/youtube-modal";
+import { PressCircular } from "./ui/press-circular";
 
 export const VideoSection = () => {
   return (
@@ -44,14 +46,7 @@ export const VideoSection = () => {
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <a 
-                      href="https://www.youtube.com/watch?v=rB_hcVQcHPQ"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
-                    >
-                      <Play className="w-10 h-10 ml-1" />
-                    </a>
+                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=rB_hcVQcHPQ" TriggerComponent={<PressCircular/>} />
                   </div>
 
                   {/* Content Overlay */}
@@ -80,14 +75,7 @@ export const VideoSection = () => {
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <a 
-                      href="https://www.youtube.com/watch?v=cdmjuwIRcoc"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-20 h-20 bg-gradient-premium rounded-full flex items-center justify-center text-white hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow shadow-glow"
-                    >
-                      <Play className="w-10 h-10 ml-1" />
-                    </a>
+                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=cdmjuwIRcoc" TriggerComponent={<PressCircular/>} />
                   </div>
 
                   {/* Content Overlay */}

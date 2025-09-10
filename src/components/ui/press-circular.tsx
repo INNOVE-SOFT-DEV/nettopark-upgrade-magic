@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Play } from "lucide-react";
 
-export const Press = React.forwardRef<
+export const PressCircular = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
@@ -22,4 +22,4 @@ export const Press = React.forwardRef<
   );
 });
 
-Press.displayName = "Press";
+PressCircular.displayName = "PressCircular";
