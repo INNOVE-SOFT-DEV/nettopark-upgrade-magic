@@ -100,7 +100,7 @@ export const VideoSection = () => {
         {/* Action Buttons */}
         <div className="text-center fade-in-up">
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s" TriggerComponent={<RectangularTrigger text="Voir toutes nos vidéos"/>} />
+            <YoutubeModal videoUrl="https://www.youtube.com/watch?v=rB_hcVQcHPQ" TriggerComponent={<RectangularTrigger text="Voir toutes nos vidéos"/>} />
             
             <Button size="lg" className="btn-outline-light text-lg px-8 py-4">
               <ArrowRight className="w-5 h-5 mr-2" />
