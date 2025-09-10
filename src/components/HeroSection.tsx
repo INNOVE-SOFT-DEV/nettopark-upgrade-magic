@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Play, ArrowRight, Phone, Star, Shield, Award } from "lucide-react";
 import heroImage from "@/assets/hero-nettopark-main.jpg";
+import YoutubeModal from "./ui/youtube-modal";
+import { RectangularTrigger } from "./ui/rectangular-trigger";
 
 export const HeroSection = () => {
   return (
@@ -14,7 +16,7 @@ export const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-4 pt-24 lg:pt-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[120vh]">
           {/* Left - Content */}
           <div className="text-white fade-in-left">
             {/* Premium Badge */}
@@ -60,15 +62,7 @@ export const HeroSection = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              
-              <Button 
-                size="lg" 
-                className="btn-secondary text-lg px-8 py-4"
-                onClick={() => window.open('https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s', '_blank')}
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Voir NettoPark en action
-              </Button>
+              <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s" TriggerComponent={<RectangularTrigger/>} />
             </div>
 
             {/* Contact Info */}

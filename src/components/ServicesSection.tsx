@@ -8,7 +8,7 @@ import parkingCleaning from "@/assets/parking-cleaning-1.jpg";
 import parkingUnderground from "@/assets/parking-underground-1.jpg";
 import parkingMaintenance from "@/assets/parking-maintenance.jpg";
 import parkingCommercial from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
-import { PressCircular } from "./ui/press-circular";
+import { CircularTrigger } from "./ui/circular-trigger";
 
 export const ServicesSection = () => {
   const services = [
@@ -19,7 +19,7 @@ export const ServicesSection = () => {
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Dégraissage haute PressCircularion",
+      title: "Dégraissage haute CircularTriggerion",
       description: "Nettoyage en profondeur pour éliminer les taches tenaces"
     },
     {
@@ -66,7 +66,7 @@ export const ServicesSection = () => {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                  <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t" TriggerComponent={<PressCircular/>} />
+                  <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t" TriggerComponent={<CircularTrigger/>} />
               </div>
 
               {/* Quality Badge */}
@@ -154,7 +154,7 @@ export const ServicesSection = () => {
               <CardContent className="p-0">
                 <div className="relative bg-gradient-hero h-80 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t" TriggerComponent={<PressCircular />} />
+                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t" TriggerComponent={<CircularTrigger />} />
                     <h4 className="text-2xl font-bold mb-4">
                       Nos Prestations en Images
                     </h4>

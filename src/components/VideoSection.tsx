@@ -3,7 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
 import YoutubeModal from "./ui/youtube-modal";
-import { PressCircular } from "./ui/press-circular";
+import { CircularTrigger } from "./ui/circular-trigger";
+import { RectangularTrigger } from "./ui/rectangular-trigger";
 
 export const VideoSection = () => {
   return (
@@ -46,7 +47,7 @@ export const VideoSection = () => {
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=rB_hcVQcHPQ" TriggerComponent={<PressCircular/>} />
+                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=rB_hcVQcHPQ" TriggerComponent={<CircularTrigger/>} />
                   </div>
 
                   {/* Content Overlay */}
@@ -75,7 +76,7 @@ export const VideoSection = () => {
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=cdmjuwIRcoc" TriggerComponent={<PressCircular/>} />
+                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=cdmjuwIRcoc" TriggerComponent={<CircularTrigger/>} />
                   </div>
 
                   {/* Content Overlay */}
@@ -99,16 +100,7 @@ export const VideoSection = () => {
         {/* Action Buttons */}
         <div className="text-center fade-in-up">
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button 
-              asChild
-              size="lg" 
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              <a href="https://www.youtube.com/watch?v=rB_hcVQcHPQ" target="_blank" rel="noopener noreferrer">
-                <Play className="w-5 h-5 mr-2" />
-                Voir toutes nos vidéos
-              </a>
-            </Button>
+            <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s" TriggerComponent={<RectangularTrigger text="Voir toutes nos vidéos"/>} />
             
             <Button size="lg" className="btn-outline-light text-lg px-8 py-4">
               <ArrowRight className="w-5 h-5 mr-2" />
