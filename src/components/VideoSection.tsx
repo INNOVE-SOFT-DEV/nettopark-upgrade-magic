@@ -46,7 +46,7 @@ export const VideoSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   
                   {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center" style={{marginBottom: '45px'}}>
                     <YoutubeModal videoUrl="https://www.youtube.com/watch?v=rB_hcVQcHPQ" TriggerComponent={<CircularTrigger/>} />
                   </div>
 
@@ -75,7 +75,7 @@ export const VideoSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   
                   {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center" style={{marginBottom: '45px'}}>
                     <YoutubeModal videoUrl="https://www.youtube.com/watch?v=cdmjuwIRcoc" TriggerComponent={<CircularTrigger/>} />
                   </div>
 
