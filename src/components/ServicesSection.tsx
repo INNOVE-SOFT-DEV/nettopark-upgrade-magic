@@ -2,11 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import YoutubeModal from "@/components/ui/youtube-modal";
 import { CheckCircle, ArrowRight, Play, Sparkles, Zap, Target } from "lucide-react";
 import parkingCleaning from "@/assets/parking-cleaning-1.jpg";
 import parkingUnderground from "@/assets/parking-underground-1.jpg";
 import parkingMaintenance from "@/assets/parking-maintenance.jpg";
 import parkingCommercial from "/lovable-uploads/9c6196a6-2396-4aaf-b5a1-e422eae304dc.png";
+import { Press } from "./ui/press";
 
 export const ServicesSection = () => {
   const services = [
@@ -64,12 +66,7 @@ export const ServicesSection = () => {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div 
-                  className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center hover:scale-125 transition-all duration-500 cursor-pointer shadow-glow pulse-glow"
-                  onClick={() => window.open('https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s', '_blank')}
-                >
-                  <Play className="w-10 h-10 text-white ml-1" />
-                </div>
+                  <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t" TriggerComponent={<Press/>} />
               </div>
 
               {/* Quality Badge */}
@@ -157,12 +154,7 @@ export const ServicesSection = () => {
               <CardContent className="p-0">
                 <div className="relative bg-gradient-hero h-80 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div 
-                      className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-white mb-6 mx-auto hover:scale-125 transition-all duration-500 cursor-pointer pulse-glow"
-                      onClick={() => window.open('https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s', '_blank')}
-                    >
-                      <Play className="w-10 h-10 ml-1" />
-                    </div>
+                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t" TriggerComponent={<Press />} />
                     <h4 className="text-2xl font-bold mb-4">
                       Nos Prestations en Images
                     </h4>
