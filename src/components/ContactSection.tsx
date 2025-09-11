@@ -59,11 +59,11 @@ export const ContactSection = () => {
       if (res.status === 200) {
         toast.success('Message envoyé avec succès !');
       } else {
-        toast.error('❌ Échec de l\'envoi du message. Veuillez réessayer.');
+        toast.error('Échec de l\'envoi du message. Veuillez réessayer.');
       }
     } catch (err) {
-      console.error("Erreur API:", err);
-      setStatus("❌ Erreur serveur.");
+      console.error(err);
+      toast.error('Échec de l\'envoi du message. Veuillez réessayer.');
     }
   };
 
