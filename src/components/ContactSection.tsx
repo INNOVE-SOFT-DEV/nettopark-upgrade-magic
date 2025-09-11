@@ -3,16 +3,72 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Send,
   CheckCircle
 } from "lucide-react";
+import { useRef, useState } from "react";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import axios from "axios";
+import toast from 'react-hot-toast';
 
 export const ContactSection = () => {
+  const formRef = useRef();
+  const [status, setStatus] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(formRef.current);
+
+    const email = formData.get("email");
+    const emailStr = typeof email === "string" ? email : "";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailStr)) {
+      alert("Veuillez entrer une adresse email valide.");
+      return;
+    }
+    if (!isValidPhoneNumber(phone)) {
+      alert("Numéro de téléphone invalide !");
+      return;
+    }
+    const data = {
+      company: formData.get("company"),
+      email: emailStr,
+      phone: phone,
+      parkingType: formData.get("parkingType"),
+      surface: formData.get("surface"),
+      message: formData.get("message"),
+    };
+
+    sendEmail(data);
+
+  };
+
+  const sendEmail = async (data) => {
+    try {
+      const res = await axios.post("https://nettopack.vercel.app/api/send-coords", data);
+      console.log(res);
+
+      if (res.status === 200) {
+        toast.success('Message envoyé avec succès !');
+      } else {
+        toast.error('❌ Échec de l\'envoi du message. Veuillez réessayer.');
+      }
+    } catch (err) {
+      console.error("Erreur API:", err);
+      setStatus("❌ Erreur serveur.");
+    }
+  };
+
+
+
   return (
     <section id="contact" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -25,7 +81,7 @@ export const ContactSection = () => {
             Demandez votre devis gratuit
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé 
+            Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé
             et découvrir comment nous pouvons améliorer la propreté de vos parkings.
           </p>
         </div>
@@ -39,61 +95,78 @@ export const ContactSection = () => {
                 Formulaire de contact
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Entreprise *
-                </label>
-                <Input placeholder="Nom de votre entreprise" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email *
-                </label>
-                <Input type="email" placeholder="votre.email@exemple.com" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Téléphone *
-                </label>
-                <Input type="tel" placeholder="01 23 45 67 89" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Type de parking
-                </label>
-                <Input placeholder="Ex: Parking souterrain résidentiel, commercial..." />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Surface approximative (m²)
-                </label>
-                <Input placeholder="Ex: 500 m²" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Message
-                </label>
-                <Textarea 
-                  placeholder="Décrivez vos besoins en détail..."
-                  className="min-h-[120px]"
-                />
-              </div>
-              
-              <Button className="btn-primary w-full">
-                <Send className="w-4 h-4 mr-2" />
-                Envoyer ma demande
-              </Button>
-              
-              <p className="text-sm text-muted-foreground text-center">
-                * Champs obligatoires - Réponse sous 2h ouvrées
-              </p>
-            </CardContent>
+            <form ref={formRef} onSubmit={handleSubmit}>
+              <CardContent className="space-y-6">
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Entreprise *
+                  </label>
+                  <Input name="company" placeholder="Nom de votre entreprise" required />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Email *
+                  </label>
+                  <Input type="email" name="email" placeholder="votre.email@exemple.com" required />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Téléphone *
+                  </label>
+                  <PhoneInput
+                    placeholder="Entrez votre numéro de téléphone"
+                    value={phone}
+                    onChange={setPhone}
+                    defaultCountry="FR"
+                    international={true}
+                    countryCallingCodeEditable={true}
+                    className="w-full p-2 border rounded"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Type de parking
+                  </label>
+                  <Input name="parkingType" placeholder="Ex: Parking souterrain résidentiel, commercial..." />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Surface approximative (m²)
+                  </label>
+                  <Input type="number" min={0} name="surface" placeholder="Ex: 500 m²" />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Message
+                  </label>
+                  <Textarea
+                    name="message"
+                    placeholder="Décrivez vos besoins en détail..."
+                    className="min-h-[120px]"
+                  />
+                </div>
+
+                <Button type="submit" className="btn-primary w-full">
+                  <Send className="w-4 h-4 mr-2" />
+                  Envoyer ma demande
+                </Button>
+
+                {status && (
+                  <p className="text-sm text-muted-foreground text-center mt-2">
+                    {status}
+                  </p>
+                )}
+
+                <p className="text-sm text-muted-foreground text-center">
+                  * Champs obligatoires - Réponse sous 2h ouvrées
+                </p>
+              </CardContent>
+            </form>
           </Card>
 
           {/* Contact Info */}
