@@ -245,7 +245,7 @@ export const AboutSection = () => {
                     Planifier une visite
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
                   <Link to="/services">
                     <MapPin className="w-4 h-4 mr-2" />
                     Voir nos réalisations

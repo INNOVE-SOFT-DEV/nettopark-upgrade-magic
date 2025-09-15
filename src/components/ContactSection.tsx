@@ -16,19 +16,21 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
 import toast from 'react-hot-toast';
+import FileUpload from "./ui/file-upload";
 
 export const ContactSection = () => {
-  const formRef = useRef();
   const [status, setStatus] = useState("");
   const [phone, setPhone] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(formRef.current);
-
     const email = formData.get("email");
     const emailStr = typeof email === "string" ? email : "";
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailStr)) {
       alert("Veuillez entrer une adresse email valide.");
@@ -38,6 +40,25 @@ export const ContactSection = () => {
       alert("Numéro de téléphone invalide !");
       return;
     }
+
+    // Convert files to base64
+    const filePromises = uploadedFiles.map(
+      (file) =>
+        new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            resolve({
+              name: file.name,
+              content: (reader.result as string).split(",")[1],
+            });
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file.file);
+        })
+    );
+
+    const base64Files = await Promise.all(filePromises);
+
     const data = {
       company: formData.get("company"),
       email: emailStr,
@@ -45,25 +66,30 @@ export const ContactSection = () => {
       parkingType: formData.get("parkingType"),
       surface: formData.get("surface"),
       message: formData.get("message"),
+      attachments: base64Files,
     };
 
-    sendEmail(data);
-
+    sendCoords(data);
   };
 
-  const sendEmail = async (data) => {
+
+
+  const sendCoords = async (data) => {
     try {
-      const res = await axios.post("https://nettopack.vercel.app/api/send-coords", data);
-      console.log(res);
+      const res = await axios.post(
+        import.meta.env.VITE_APP_BACKEND_URL + "api/send-coords",
+        data,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
       if (res.status === 200) {
-        toast.success('Message envoyé avec succès !');
+        toast.success("Message envoyé avec succès !");
       } else {
-        toast.error('Échec de l\'envoi du message. Veuillez réessayer.');
+        toast.error("Échec de l'envoi du message. Veuillez réessayer.");
       }
     } catch (err) {
       console.error(err);
-      toast.error('Échec de l\'envoi du message. Veuillez réessayer.');
+      toast.error("Échec de l'envoi du message. Veuillez réessayer.");
     }
   };
 
@@ -151,10 +177,15 @@ export const ContactSection = () => {
                   />
                 </div>
 
+                <div>
+                  <FileUpload onFilesChange={setUploadedFiles} />
+                </div>
+
                 <Button type="submit" className="btn-primary w-full">
                   <Send className="w-4 h-4 mr-2" />
                   Envoyer ma demande
                 </Button>
+
 
                 {status && (
                   <p className="text-sm text-muted-foreground text-center mt-2">
