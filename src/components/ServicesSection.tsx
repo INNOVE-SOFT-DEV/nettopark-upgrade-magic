@@ -66,7 +66,7 @@ export const ServicesSection = () => {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                  <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s" TriggerComponent={<CircularTrigger/>} />
+                  <YoutubeModal videoUrl="https://youtube.com/watch?v=rB_hcVQcHPQ" TriggerComponent={<CircularTrigger/>} />
               </div>
 
               {/* Quality Badge */}
@@ -154,7 +154,7 @@ export const ServicesSection = () => {
               <CardContent className="p-0">
                 <div className="relative bg-gradient-hero h-80 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <YoutubeModal videoUrl="https://www.youtube.com/watch?v=IAIxDaS83gI&t=2s" TriggerComponent={<CircularTrigger />} />
+                    <YoutubeModal videoUrl="https://youtube.com/watch?v=cdmjuwIRcoc" TriggerComponent={<CircularTrigger />} />
                     <h4 className="text-2xl font-bold mb-4">
                       Nos Prestations en Images
                     </h4>
